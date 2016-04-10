@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="75.0" maxWidth="600.0" minHeight="75.0" minWidth="600.0" prefHeight="75.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="btn_play" mnemonicParsing="false" onMouseClicked="#playOnClick" textOverrun="CLIP">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/play.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_pause" mnemonicParsing="false" onMouseClicked="#pauseOnClick">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/pause.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_stop" mnemonicParsing="false" onMouseClicked="#stopOnClick">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/stop.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_prev" mnemonicParsing="false" onMouseClicked="#backOnClick">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/prev.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_next" mnemonicParsing="false" onMouseClicked="#nextOnClick">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/next.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            <Button fx:id="btn_file" mnemonicParsing="false" prefHeight="61.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <children>
+                        <HBox alignment="CENTER" prefWidth="203.0">
+                            <children>
+                              <Label fx:id="lab_level" alignment="CENTER" maxHeight="-Infinity" text="Уровень: 100%" textAlignment="CENTER" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" right="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                          <Slider fx:id="slid_level" onMouseMoved="#levelOnChange" />
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
